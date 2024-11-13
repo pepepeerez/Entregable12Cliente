@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Manager</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario</h1>
+        <form id="api-form" method="GET" onsubmit="return handleFormSubmit(event)">
+            <label for="base-url">Base URL:</label>
+            <input type="text" id="base-url" required pattern="https?://.+">
+
+            <label for="get-all">Endpoint de Obtener Todos:</label>
+            <input type="text" id="get-all" placeholder="/api/v1/product">
+
+            <label for="insert">Endpoint de Insertar:</label>
+            <input type="text" id="insert" placeholder="/api/v1/product/insert/">
+
+            <label for="edit">Endpoint de Editar:</label>
+            <input type="text" id="edit" placeholder="/api/v1/product/edit/{id}">
+
+            <label for="delete">Endpoint de Eliminar:</label>
+            <input type="text" id="delete" placeholder="/api/v1/product/delete/{id}">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
